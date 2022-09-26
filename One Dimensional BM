@@ -1,0 +1,13 @@
+% BROWNIAN MOTION
+close all
+N = 1e4; 
+mu = 0;
+sigma = 1;
+paths = 5;
+
+for i = 1:paths
+    dist = sigma*randn(N,1)+ mu;
+    B = cumsum(dist);
+    plot(B); hold on 
+end 
+title('One dimensional Brownian Motion X(t)'); xlabel('Time'); ylabel('X(t)')
